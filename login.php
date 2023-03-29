@@ -52,7 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         	<label for="password">Password:</label>
         	<input type="password" id="password" name="password" required />
         	<input type="submit" value="Login" />
-        	<input type="button" value="Sign Up" />
+			<input type="button" value="Sign Up" onClick="location.href='signUp.php'"/>
       	</form>
 	</div>
 

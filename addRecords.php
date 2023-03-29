@@ -37,7 +37,7 @@
           </li>
 
           <li>
-            <a href="patient.html">
+            <a href="patient.php">
               <span class="icon">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>

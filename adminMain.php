@@ -52,7 +52,7 @@ $query = "SELECT ( SELECT COUNT(*) FROM patient ) AS 'total patients', ( SELECT 
           </li>
 
           <li>
-            <a href="patient.html">
+            <a href="patient.php">
               <span class="icon">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>
@@ -70,7 +70,7 @@ $query = "SELECT ( SELECT COUNT(*) FROM patient ) AS 'total patients', ( SELECT 
           </li>
 
           <li>
-            <a href="addRecords.html">
+            <a href="addRecords.php">
               <span class="icon">
                 <i class="fa-solid fa-user-plus"></i>
               </span>

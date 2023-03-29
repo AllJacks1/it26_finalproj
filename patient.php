@@ -26,16 +26,14 @@
               <span class="logo-name">St. Kerby Hospital</span>
             </a>
           </li>
-
           <li id="dashboard">
-            <a href="adminMain.html">
+            <a href="adminMain.php">
               <span class="icon">
                 <i class="fa-solid fa-house"></i>
               </span>
               <span class="title">Dashboard</span>
             </a>
           </li>
-
           <li>
             <a href="patient.html">
               <span class="icon">
@@ -44,18 +42,16 @@
               <span class="title">Patient</span>
             </a>
           </li>
-
           <li>
-            <a href="doctor.html">
+            <a href="doctor.php">
               <span class="icon">
                 <i class="fa-solid fa-user-doctor"></i>
               </span>
               <span class="title">Doctor</span>
             </a>
           </li>
-
           <li>
-            <a href="addRecords.html">
+            <a href="addRecords.php">
               <span class="icon">
                 <i class="fa-solid fa-user-plus"></i>
               </span>
@@ -74,7 +70,6 @@
         </ul>
       </div>
     </div>
-
     <div class="main">
         <div class="topbar">
             <div class="toggle">
@@ -88,74 +83,41 @@
                 </label>
             </div>
         </div>
-
         <div class="details">
             <div class="patient">
                 <div class="cardHeader">
                     <h2>Patient's Information   </h2>
                     <a href="#" class="btn">View All</a>
                 </div>
-            
-    
-                <table>
-                    <thead>
-                        <tr>
-                            <td>PatientID</td>
-                            <td>Last name</td>
-                            <td>First Name</td>
-                            <td>Middle Name</td>
-                            <td>Gender</td>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>PatientID</td>
-                            <td>Last name</td>
-                            <td>First Name</td>
-                            <td>Middle Name</td>
-                            <td>Gender</td>
-                        </tr>
-                    </tbody>
-
-                    <tbody>
-                        <tr>
-                            <td>PatientID</td>
-                            <td>Last name</td>
-                            <td>First Name</td>
-                            <td>Middle Name</td>
-                            <td>Gender</td>
-                        </tr>
-                    </tbody>
-
-                    <tbody>
-                        <tr>
-                            <td>PatientID</td>
-                            <td>Last name</td>
-                            <td>First Name</td>
-                            <td>Middle Name</td>
-                            <td>Gender</td>
-                        </tr>
-                    </tbody>
-
-                    <tbody>
-                        <tr>
-                            <td>PatientID</td>
-                            <td>Last name</td>
-                            <td>First Name</td>
-                            <td>Middle Name</td>
-                            <td>Gender</td>
-                        </tr>
-                    </tbody>
+                <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <th>Patient ID</th>
+                    <th>Fullname</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                  </thead>
+                  <tbody>
+                  <?php
+                    include("database.php");
+                    include("functions.php");
+                    
+                    $query=mysqli_query($con,"SELECT patientID, CONCAT(fn, ' ',  mi, '. ', ln) AS 'fullname', age, gender FROM `patient` WHERE 1");
+                    while($row=mysqli_fetch_array($query)){
+                      ?>
+                      <tr>
+                        <td><?php echo ucwords($row['patientID']); ?></td>
+                        <td><?php echo ucwords($row['fullname']); ?></td>
+                        <td><?php echo $row['age']; ?></td>
+                        <td><?php echo ucwords($row['gender']); ?></td>
+                      </tr>
+                      <?php
+                    }
+                  ?>
+                  </tbody>
                 </table>
             </div>
       </div>
-
-      
-
-      
     </div>
-
     <script src="adminMain.js"></script>
   </body>
 </html>

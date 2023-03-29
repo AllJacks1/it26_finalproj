@@ -41,7 +41,7 @@
 			<option value="other">Other</option>
 		</select>
 		
-		<a href="login.html"><input  type="button" value="Cancel"></a>
+		<a href="login.php"><input  type="button" value="Cancel"></a>
         <input type="submit" value="Sign Up">
 	</form>
 
