@@ -201,9 +201,6 @@
     position: relative;
     width: 100%;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 10px;
     margin-top: 10px;
   }
 
@@ -256,12 +253,13 @@
   }
   .details .doctor table tr td {
     padding: 10px;
+    text-align: center;
   }
   .details .doctor table tr td:last-child {
-    text-align: end;
+    text-align: center;
   }
   .details .doctor table tr td:nth-child(2) {
-    text-align: end;
+    text-align: center;
   }
   .details .doctor table tr td:nth-child(3) {
     text-align: center;

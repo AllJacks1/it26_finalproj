@@ -142,6 +142,7 @@
     min-height: 100vh;
     background: var(--white);
     transition: 0.5s;
+    
   }
   .main.active {
     width: calc(100% - 80px);
@@ -169,59 +170,140 @@
     color: var(--black1 );
   }
 
-.main .ad-form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.ad-form {
-    position: absolute;
-    left: 20px;
-    background-color:var(--white);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    padding: 50px;
-    border-radius: 10px;
-    width: 450px;
-    height: 500px;
-    max-width: 100%;
-  }
-
-
-.ad-form  label {
-    display: flex;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-.ad-form  input[type="text"] {
+  .details {
+    position: relative;
     width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  .details .newAdm {
+    position: relative;
+    display: grid;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    max-height: 500px;
+    padding: 20px;
+  }
+
+  .details .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+  }
+
+.newAdm {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
-.ad-form input[type="date"] {
-    width: 50%;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-.ad-form select {
-    width: 30%;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
- .ad-form button {
-    margin-right: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-  }
+.newAdm form {
+  padding-bottom: 20px;
+}
 
-  .ad-form button[type="clear"] {
-    background: red;
-  }
+.newAdm label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.newAdm  input[type="text"] {
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 
-  .ad-form button[type="submit"] {
-    background: green;
-  }
+.newAdm input[type="date"] {
+  width: 30%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.newAdm select {
+  width: 30%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.newAdm button {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newAdm button[type="reset"] {
+  background: red;
+}
+
+.newAdm button[type="submit"] {
+  background: green;
+}
+
+.details .newPresc {
+  position: relative;
+  display: grid;
+  background: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  max-height: 300px;
+  padding: 20px;
+}
+
+.newPresc {
+display: flex;
+margin-bottom: 5px;
+font-weight: bold;
+}
+.newPresc {
+padding-bottom: 20px;
+}
+
+.newPresc label {
+display: flex;
+margin-bottom: 5px;
+font-weight: bold;
+}
+.newPresc  input[type="text"] {
+width: 70%;
+padding: 5px;
+margin-bottom: 10px;
+}
+
+.newPresc input[type="date"] {
+width: 70%;
+padding: 5px;
+margin-bottom: 10px;
+}
+
+.newPresc select {
+width: 30%;
+padding: 5px;
+margin-bottom: 10px;
+}
+
+.newPresc button {
+margin-right: 10px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+}
+
+.newPresc button[type="reset"] {
+background: red;
+}
+
+.newPresc button[type="submit"] {
+background: green;
+}
 
 
   @media (max-width: 991px) {

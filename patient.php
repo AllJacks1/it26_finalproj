@@ -11,7 +11,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+<<<<<<<< HEAD:doctor.php
+    <link rel="stylesheet" href="doctor.css?v=<?php echo time(); ?>">
+========
     <link rel="stylesheet" href="patient.css">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
     <title>Document</title>
   </head>
   <body>
@@ -27,7 +31,15 @@
             </a>
           </li>
           <li id="dashboard">
+<<<<<<<< HEAD:patient.php
             <a href="adminMain.php">
+========
+<<<<<<<< HEAD:doctor.php
+            <a href="adminMain.php">
+========
+            <a href="adminMain.html">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
+>>>>>>>> f61059ec7f631a1cf1d239e193d3902bbcd0d36b:patient.html
               <span class="icon">
                 <i class="fa-solid fa-house"></i>
               </span>
@@ -35,7 +47,15 @@
             </a>
           </li>
           <li>
+<<<<<<<< HEAD:patient.php
             <a href="patient.php">
+========
+<<<<<<<< HEAD:doctor.php
+            <a href="patient.php">
+========
+            <a href="patient.html">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
+>>>>>>>> f61059ec7f631a1cf1d239e193d3902bbcd0d36b:patient.html
               <span class="icon">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>
@@ -43,7 +63,15 @@
             </a>
           </li>
           <li>
+<<<<<<<< HEAD:patient.php
             <a href="doctor.php">
+========
+<<<<<<<< HEAD:doctor.php
+            <a href="doctor.php">
+========
+            <a href="doctor.html">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
+>>>>>>>> f61059ec7f631a1cf1d239e193d3902bbcd0d36b:patient.html
               <span class="icon">
                 <i class="fa-solid fa-user-doctor"></i>
               </span>
@@ -51,7 +79,24 @@
             </a>
           </li>
           <li>
+<<<<<<<< HEAD:patient.php
             <a href="addRecords.php">
+========
+<<<<<<<< HEAD:doctor.php
+          <a href="medicine.php">
+            <span class="icon">
+              <i class="fa-solid fa-tablets"></i>
+            </span>
+            <span class="title">Medicine</span>
+          </a>
+        </li>
+
+          <li>
+            <a href="addRecords.php">
+========
+            <a href="addRecords.html">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
+>>>>>>>> f61059ec7f631a1cf1d239e193d3902bbcd0d36b:patient.html
               <span class="icon">
                 <i class="fa-solid fa-user-plus"></i>
               </span>
@@ -60,7 +105,11 @@
           </li>
 
           <li>
+<<<<<<<< HEAD:doctor.php
+            <a href="manageRecords.php">
+========
             <a href="#">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
               <span class="icon">
                 <i class="fa-solid fa-pen-to-square"></i>
               </span>
@@ -78,17 +127,54 @@
 
             <div class="search">
                 <label>
+<<<<<<<< HEAD:doctor.php
+                    <input type="text" placeholder="Search Doctor">
+========
                     <input type="text" placeholder="Search Patient ID">
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
             </div>
         </div>
         <div class="details">
+<<<<<<<< HEAD:doctor.php
+            <div class="doctor">
+                <div class="cardHeader">
+                    <h2>Doctor's Information</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+                <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <th>Doctor ID</th>
+                    <th>Fullname</th>
+                    <th>Gender</th>
+                    <th>Specialization</th>
+                  </thead>
+                  <tbody>
+                  <?php
+                    include("database.php");
+                    include("functions.php");
+                    
+                    $query=mysqli_query($con,"select * from `doctor`");
+                    while($row=mysqli_fetch_array($query)){
+                      ?>
+                      <tr>
+                        <td><?php echo ucwords($row['doctorID']); ?></td>
+                        <td><?php echo ucwords($row['fullname']); ?></td>
+                        <td><?php echo $row['gender']; ?></td>
+                        <td><?php echo ucwords($row['specialization']); ?></td>
+                      </tr>
+                      <?php
+                    }
+                  ?>
+                  </tbody>
+========
             <div class="patient">
                 <div class="cardHeader">
                     <h2>Patient's Information   </h2>
                     <a href="#" class="btn">View All</a>
                 </div>
+<<<<<<<< HEAD:patient.php
                 <table class="table table-striped table-bordered table-hover">
                   <thead>
                     <th>Patient ID</th>
@@ -114,6 +200,61 @@
                     }
                   ?>
                   </tbody>
+========
+            
+    
+                <table>
+                    <thead>
+                        <tr>
+                            <td>PatientID</td>
+                            <td>Last name</td>
+                            <td>First Name</td>
+                            <td>Middle Name</td>
+                            <td>Gender</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>PatientID</td>
+                            <td>Last name</td>
+                            <td>First Name</td>
+                            <td>Middle Name</td>
+                            <td>Gender</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>PatientID</td>
+                            <td>Last name</td>
+                            <td>First Name</td>
+                            <td>Middle Name</td>
+                            <td>Gender</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>PatientID</td>
+                            <td>Last name</td>
+                            <td>First Name</td>
+                            <td>Middle Name</td>
+                            <td>Gender</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>PatientID</td>
+                            <td>Last name</td>
+                            <td>First Name</td>
+                            <td>Middle Name</td>
+                            <td>Gender</td>
+                        </tr>
+                    </tbody>
+>>>>>>>> fb6055acfbc7600afbef5429eb858dc68a573542:patient.html
+>>>>>>>> f61059ec7f631a1cf1d239e193d3902bbcd0d36b:patient.html
                 </table>
             </div>
       </div>
