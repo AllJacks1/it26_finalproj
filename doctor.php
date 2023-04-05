@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet" href="doctor.css?v=<?php echo time(); ?>">
     <title>Document</title>
   </head>
   <body>
@@ -55,6 +55,15 @@
           </li>
 
           <li>
+          <a href="medicine.php">
+            <span class="icon">
+              <i class="fa-solid fa-tablets"></i>
+            </span>
+            <span class="title">Medicine</span>
+          </a>
+        </li>
+
+          <li>
             <a href="addRecords.php">
               <span class="icon">
                 <i class="fa-solid fa-user-plus"></i>
@@ -64,7 +73,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="manageRecords.php">
               <span class="icon">
                 <i class="fa-solid fa-pen-to-square"></i>
               </span>
@@ -83,7 +92,7 @@
 
             <div class="search">
                 <label>
-                    <input type="text" placeholder="Search Patient ID">
+                    <input type="text" placeholder="Search Doctor">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
             </div>
