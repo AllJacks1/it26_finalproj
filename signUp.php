@@ -51,7 +51,7 @@
 				</div>
 				<i class="fa-solid fa-check"></i>
 			</div>
-			
+
 		</div>
 		<div class="form-outer">
 			<form class="form" action="#">
@@ -59,15 +59,15 @@
 					<div class="title">Personal Details</div>
 					<div class="field">
 						<div class="label">Last Name:</div>
-						<input type="text" placeholder="Enter last name" name="lname" id="lname" required>
+						<input type="text" placeholder="Enter last name" name="lname" id="lname">
 					</div>
 					<div class="field">
 						<div class="label">First Name:</div>
-						<input type="text" placeholder="Enter first name" name="fname" id="fname" required>
+						<input type="text" placeholder="Enter first name" name="fname" id="fname">
 					</div>
 					<div class="field">
 						<div class="label">Middle Initial:</div>
-						<input type="text" placeholder="Enter middle name" maxlength="1"  name="mid-init" id="mid-init" required>
+						<input type="text" placeholder="Enter middle name" maxlength="1" name="mid-init" id="mid-init">
 					</div>
 					<div class="field nextBtn">
 						<button>Next</button>
@@ -145,7 +145,7 @@
 					</div>
 					<div class="field">
 						<div class="label">Phone Number:</div>
-						<input type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="11" name="phone-num" id="phone-num" >
+						<input type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="11" name="phone-num" id="phone-num">
 					</div>
 
 					<div class="field">
@@ -162,7 +162,7 @@
 					<div class="title">Create Account</div>
 					<div class="field">
 						<div class="label">Username:</div>
-						<input type="text" placeholder="Enter username"name="username" id="username">
+						<input type="text" placeholder="Enter username" name="username" id="username">
 					</div>
 					<div class="field">
 						<div class="label">Password:</div>
@@ -170,7 +170,7 @@
 					</div>
 					<div class="field">
 						<div class="label">Confirm Password:</div>
-						<input type="text" name="confirm-pass" id="confirm-pass">
+						<input type="password" name="confirm-pass" id="confirm-pass">
 					</div>
 					<div class="field btns">
 						<button class="prev-4 prev">Previous</button>
@@ -182,6 +182,7 @@
 	</div>
 
 	<script src="styles/signUp.js"></script>
+	
 </body>
 
 </html>

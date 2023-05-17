@@ -17,7 +17,7 @@
         <li>
           <a href="#">
             <span class="logo">
-              <img src=".images/logo.ico" alt="" />
+              <img src="images/logo.ico" alt="" />
             </span>
             <span class="logo-name">St. Kerby Hospital</span>
           </a>
@@ -88,7 +88,7 @@
 
       <div class="search">
         <label>
-          <input type="text" placeholder="Search Patient">
+          <input type="text" placeholder="Search Patient ID"  id="myInput" onkeyup='TableSearch()'>
           <i class="fa-solid fa-magnifying-glass"></i>
         </label>
 
@@ -100,9 +100,8 @@
       <div class="patient">
         <div class="cardHeader">
           <h2>Patient Information </h2>
-          <a href="#" class="btn">View All</a>
         </div>
-        <table>
+        <table id="patientTable">
           <thead>
             <tr>
               <th>PatientID</th>
@@ -117,7 +116,6 @@
 
           <tbody>
             <?php
-
             include("database.php");
             include("functions.php");
 
@@ -139,13 +137,8 @@
         </table>
       </div>
     </div>
-
-
-
-
   </div>
-
-  <script src="styles/adminMain.js"></script>
+  <script src="styles/adminMain.js" type="application/javascript"></script>
 </body>
 
 </html>
