@@ -267,20 +267,22 @@ if ($user_data) {
                                 $old_admission_numbers[] = $row['AdmissionNo'];
                             }
 
-                            foreach ($old_admission_numbers as $ids) {
-                                $query = mysqli_query($con, "SELECT * FROM `prescription` WHERE `AdmissionNo` = '$ids'");
-                                while ($row = mysqli_fetch_array($query)) {
-                                    $prescriptionFound = true;
-                            ?>
-                                    <tr>
-                                        <th>Med Code:</th>
-                                        <td><?php echo ucwords($row['medcode']); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Dosage:</th>
-                                        <td><?php echo $row['dosage']; ?></td>
-                                    </tr>
-                            <?php
+                            if(isset($old_admission_numbers)) {
+                                foreach ($old_admission_numbers as $ids) {
+                                    $query = mysqli_query($con, "SELECT * FROM `prescription` WHERE `AdmissionNo` = '$ids'");
+                                    while ($row = mysqli_fetch_array($query)) {
+                                        $prescriptionFound = true;
+                                ?>
+                                        <tr>
+                                            <th>Med Code:</th>
+                                            <td><?php echo ucwords($row['medcode']); ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dosage:</th>
+                                            <td><?php echo $row['dosage']; ?></td>
+                                        </tr>
+                                <?php
+                                    }
                                 }
                             }
 
